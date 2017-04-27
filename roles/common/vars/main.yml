@@ -1,0 +1,17 @@
+---
+packages:
+ - wget
+ - ntp
+ - yum-utils
+ - firewalld
+ - cockpit
+services:
+ - sshd
+ - ntpd
+ - firewalld
+sockets:
+ - cockpit.socket
+firewalld_services_enabled:
+ - ssh
+firewalld_ports_enabled:
+ - 9090/tcp

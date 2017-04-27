@@ -1,0 +1,9 @@
+---
+- name: setup portainer
+  docker_container:
+    name: portainer
+    image: portainer/portainer
+    volumes: /var/run/docker.sock:/var/run/docker.sock
+    state: started
+    ports:
+     - "9000:9000"

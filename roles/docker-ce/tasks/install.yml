@@ -1,0 +1,15 @@
+---
+- name: Install docker-ce.repo
+  copy:
+    src: docker-ce.repo
+    dest: /etc/yum.repos.d/docker-ce.repo
+
+- name: Ensure some packages are installed
+  yum:
+    pkg: "{{ item }}"
+    state: latest
+#    enablerepo: "{{ required_repos }}"
+  with_items: "{{ packages }}"
+  when: packages is defined
+  tags:
+    - install
