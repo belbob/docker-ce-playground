@@ -1,6 +1,6 @@
 ---
 packages:
- - python-docker-py  
+ - python-docker-py
  - docker-ce
 services:
  - docker

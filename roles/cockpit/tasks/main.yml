@@ -2,4 +2,3 @@
 - include_tasks: install.yml  # install pkgs
 - include_tasks: services.yml  # running services
 - include_tasks: security.yml # config firewall
-- include_tasks: hosts.yml

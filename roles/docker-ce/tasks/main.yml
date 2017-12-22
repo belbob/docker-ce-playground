@@ -1,4 +1,4 @@
 ---
-- include: install.yml  # install pkgs
-- include: services.yml  # running services
-- include: portainer.yml # start portainer as GUI
+- include_tasks: install.yml  # install pkgs
+- include_tasks: services.yml  # running services
+- include_tasks: portainer.yml # start portainer as GUI

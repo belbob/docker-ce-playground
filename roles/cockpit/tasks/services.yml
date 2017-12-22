@@ -1,0 +1,10 @@
+---
+- name: Ensure start some sockets
+  systemd:
+    name: "{{ item }}"
+    state: started
+    enabled: True
+  with_items: "{{ sockets }}"
+  when: sockets is defined
+  tags:
+    - sockets

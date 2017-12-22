@@ -1,0 +1,8 @@
+---
+packages:
+ - cockpit
+ - cockpit-docker
+sockets:
+ - cockpit.socket
+firewalld_ports_enabled:
+ - 9090/tcp
